@@ -503,3 +503,66 @@ button{
 .info-card p {
   font-size: 16px;
 }
+@media (max-width: 768px) {
+
+  .container {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .side-card {
+    width: 100%;
+  }
+
+  .mainHero {
+    padding: 20px;
+  }
+
+  .navbar {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+  }
+
+  .main-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .main-left h1 {
+    font-size: 42px;
+  }
+
+  .main-right {
+    width: 100%;
+    height: auto;
+  }
+
+  .main-right img {
+    width: 220px;
+    height: 220px;
+  }
+
+  .circle {
+    width: 250px;
+    height: 250px;
+  }
+
+  .hero-left h1 {
+    font-size: 36px;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+  }
+
+  .list {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
