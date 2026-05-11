@@ -3,7 +3,9 @@ const cors = require("cors");
 
 const app = express();
 
-app.use(cors());
+app.use(cors({
+  origin: "https://portfolio-mahmoud-qutama-8vof.vercel.app"
+}));
 app.use(express.json());
 
 app.get("/api/about", (req, res) => {
@@ -152,6 +154,10 @@ app.get("/api/contact", (req, res) => {
   });
 });
 
-app.listen(5000, () => {
-  console.log("Server running on port 5000");
+const PORT = process.env.PORT || 5000;
+
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
 });
+
+وليس:

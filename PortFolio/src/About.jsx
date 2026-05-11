@@ -6,8 +6,10 @@ function About() {
   const [about, setAbout] = useState(null);
 
   useEffect(() => {
+    const API = import.meta.env.VITE_API_URL;
+
     axios
-      .get("http://localhost:5000/api/about")
+      .get(`${API}/api/about`)
       .then((res) => {
         console.log("DATA:", res.data);
         setAbout(res.data);
@@ -36,19 +38,12 @@ function About() {
 
         <div className="info-box">
           <h4>Education</h4>
-
-          <p>
-            {about.education.field}
-          </p>
-
-          <p>
-            {about.education.academy}
-          </p>
+          <p>{about.education.field}</p>
+          <p>{about.education.academy}</p>
         </div>
 
         <div className="info-box">
           <h4>Frontend Skills</h4>
-
           <div className="skills">
             {about.skills.frontend.map((skill, index) => (
               <span key={index}>{skill}</span>
@@ -58,7 +53,6 @@ function About() {
 
         <div className="info-box">
           <h4>Backend Skills</h4>
-
           <div className="skills">
             {about.skills.backend.map((skill, index) => (
               <span key={index}>{skill}</span>
